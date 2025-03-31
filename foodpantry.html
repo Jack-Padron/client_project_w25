@@ -89,10 +89,29 @@
         <p>&copy; 2025 University of Michigan | <a href="https://umich.edu">U-M Website</a></p>
     </footer>
 
+    <button id="backToTop" title="Back to Top">↑</button>
+
     <script>
         const footer = document.querySelector('footer p');
         const year = new Date().getFullYear();
         footer.innerHTML = `&copy; ${year} University of Michigan | <a href="https://umich.edu">U-M Website</a>`;
+
+        const backToTopButton = document.getElementById("backToTop");
+
+        window.onscroll = () => {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        backToTopButton.onclick = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
     </script>
 </body>
 </html>
