@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to Main Content</a>
 
     <header>
-        <a href="#main" class="skip-link">Skip to Main Content</a>
         <nav>
-            <ul>
+            <ul class="nav-bar">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="foodpantry.html">Maize & Blue Cupboard</a></li>
                 <li><a href="caps.html">Counseling and Psychological Services</a></li>
@@ -23,37 +23,37 @@
     </header>
 
     <main id="main">
-        <section>
-            <h2>Resources</h2>
-            <p>Student Life Resources aims to support the University of Michigan community by providing equitable access to essential services, fostering academic success, and promoting overall well-being. Below is a categorized list of resources to help students thrive.</p>
-            <figure>
+        <section class="grid-container">
+            <article>
+                <h2>Resources</h2>
+                <p>Student Life Resources aims to support the University of Michigan community by providing equitable access to essential services, fostering academic success, and promoting overall well-being. Below is a categorized list of resources to help students thrive.</p>
                 <img src="images/students_outside.JPG" alt="Students gathered outside on campus">
-            </figure>
+            </article>
+
+            <article>
+                <h2>Resources By Category</h2>
+                <ul>
+                    <li><strong>Critical Incident Support & Conflict Management:</strong> Support for students who are experiencing or have been impacted by a conflict or critical incident.</li>
+                    <li><strong>Finance:</strong> Financial resources to help with immediate and long-term needs, such as emergencies, college funding, and employment.</li>
+                    <li><strong>Food:</strong> Services to help students maintain healthy habits, find access to food, and seek assistance when struggling to buy food.</li>
+                    <li><strong>Health Care:</strong> Support for students seeking medical, dental, or mental health treatment, including resources for securing health insurance and finding care providers.</li>
+                    <li><strong>Housing & Transportation:</strong> Campus and community resources for securing housing, accessing transportation, and seeking assistance for a variety of housing needs.</li>
+                </ul>
+                <p><a href="#">View all resources</a></p>
+            </article>
         </section>
 
-        <section>
-            <h2>Resources By Category</h2>
-            <ul>
-                <li><strong>Critical Incident Support & Conflict Management:</strong> Support for students who are experiencing or have been impacted by a conflict or critical incident.</li>
-                <li><strong>Finance:</strong> Financial resources to help with immediate and long-term needs, such as emergencies, college funding, and employment.</li>
-                <li><strong>Food:</strong> Services to help students maintain healthy habits, find access to food, and seek assistance when struggling to buy food.</li>
-                <li><strong>Health Care:</strong> Support for students seeking medical, dental, or mental health treatment, including resources for securing health insurance and finding care providers.</li>
-                <li><strong>Housing & Transportation:</strong> Campus and community resources for securing housing, accessing transportation, and seeking assistance for a variety of housing needs.</li>
-            </ul>
-            <p><a href="#">View all resources</a></p>
-        </section>
+        <section class="grid-container">
+            <article>
+                <h2>Basic Needs</h2>
+                <p>We are committed to striving for fair and equitable access to food and other essential resources. Our goal is to ensure that every student at the University of Michigan can focus on their education without worrying about meeting their basic needs.</p>
+            </article>
 
-        <section>
-            <h2>Basic Needs</h2>
-            <p>We are committed to striving for fair and equitable access to food and other essential resources. Our goal is to ensure that every student at the University of Michigan can focus on their education without worrying about meeting their basic needs.</p>
-        </section>
-
-        <section>
-            <h2>About</h2>
-            <p>Student Life is here to support students throughout their journey at the University of Michigan. Our resources are designed to meet a wide variety of needs, ensuring that students can thrive academically and personally. Whether you need help with financial challenges, health care, or food security, our team is ready to assist you.</p>
-            <figure>
+            <article>
+                <h2>About</h2>
+                <p>Student Life is here to support students throughout their journey at the University of Michigan. Our resources are designed to meet a wide variety of needs, ensuring that students can thrive academically and personally. Whether you need help with financial challenges, health care, or food security, our team is ready to assist you.</p>
                 <img src="images/students.jpg" alt="Students collaborating during a study session">
-            </figure>
+            </article>
         </section>
 
         <section>
@@ -77,5 +77,10 @@
         <p>&copy; 2025 University of Michigan | <a href="https://umich.edu">U-M Website</a></p>
     </footer>
 
+    <script>
+        const footer = document.querySelector('footer p');
+        const year = new Date().getFullYear();
+        footer.innerHTML = `&copy; ${year} University of Michigan | <a href="https://umich.edu">U-M Website</a>`;
+    </script>
 </body>
 </html>

@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to Main Content</a>
 
     <header>
-        <a href="#main" class="skip-link">Skip to Main Content</a>
         <nav>
-            <ul>
+            <ul class="nav-bar">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="foodpantry.html">Maize & Blue Cupboard</a></li>
                 <li><a href="caps.html" class="active">Counseling and Psychological Services</a></li>
@@ -23,53 +23,55 @@
     </header>
 
     <main id="main">
-        <section>
-            <h2>Our Mission</h2>
-            <p>University Health & Counseling (UHC) supports the health and well-being of the campus community. CAPS is committed to providing high-quality mental health services to empower students, support academic success, and foster a sense of connection and resilience within the Michigan community.</p>
-            <figure>
+        <section class="grid-container">
+            <article>
+                <h2>Our Mission</h2>
+                <p>University Health & Counseling (UHC) supports the health and well-being of the campus community. CAPS is committed to providing high-quality mental health services to empower students, support academic success, and foster a sense of connection and resilience within the Michigan community.</p>
                 <img src="images/support_group.jpg" alt="A counselor leading a group discussion">
-            </figure>
+            </article>
+
+            <article>
+                <h2>Services We Offer</h2>
+                <ul>
+                    <li><strong>Individual Peer Counseling (IPC):</strong> A space for students to vent and receive support from trained peers.</li>
+                    <li><strong>Uwill Teletherapy:</strong> Access video, phone, chat, and messaging sessions with licensed mental health professionals for free.</li>
+                    <li><strong>Togetherall:</strong> An anonymous online peer-support tool where students can share and support each other in a safe, moderated community.</li>
+                    <li><strong>Stress Less Workshops:</strong> Tools and strategies to help manage stress effectively.</li>
+                </ul>
+            </article>
         </section>
 
-        <section>
-            <h2>Services We Offer</h2>
-            <ul>
-                <li><strong>Individual Peer Counseling (IPC):</strong> A space for students to vent and receive support from trained peers.</li>
-                <li><strong>Uwill Teletherapy:</strong> Access video, phone, chat, and messaging sessions with licensed mental health professionals for free.</li>
-                <li><strong>Togetherall:</strong> An anonymous online peer-support tool where students can share and support each other in a safe, moderated community.</li>
-                <li><strong>Stress Less Workshops:</strong> Tools and strategies to help manage stress effectively.</li>
-            </ul>
+        <section class="grid-container">
+            <article>
+                <h2>Hours and Urgent Support</h2>
+                <ul>
+                    <li><strong>Office Hours:</strong> Monday - Thursday: 8am - 6pm | Friday: 8am - 5pm | Saturday & Sunday: Closed</li>
+                    <li><strong>Urgent Support:</strong> Monday - Friday: 10am - 4:30pm | After Hours: 24/7 at (734) 764-8312</li>
+                </ul>
+            </article>
+
+            <article>
+                <h2>Key Resources</h2>
+                <p>CAPS is proud to offer both in-person and virtual services, ensuring accessibility for all students. For those requiring telecounseling privacy, CAPS provides private spaces upon request. Visit our front desk on the 4th floor of the Michigan Union for assistance.</p>
+            </article>
         </section>
 
-        <section>
-            <h2>Hours and Urgent Support</h2>
-            <ul>
-                <li><strong>Office Hours:</strong> Monday - Thursday: 8am - 6pm | Friday: 8am - 5pm | Saturday & Sunday: Closed</li>
-                <li><strong>Urgent Support:</strong> Monday - Friday: 10am - 4:30pm | After Hours: 24/7 at (734) 764-8312</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Key Resources</h2>
-            <p>CAPS is proud to offer both in-person and virtual services, ensuring accessibility for all students. For those requiring telecounseling privacy, CAPS provides private spaces upon request. Visit our front desk on the 4th floor of the Michigan Union for assistance.</p>
-        </section>
-
-        <section>
-            <h2>Support and Inclusivity</h2>
-            <p>CAPS is committed to creating a welcoming and affirming environment for all students, celebrating diversity and promoting social justice. We stand against discrimination and harassment, working to ensure that every student feels valued and supported.</p>
-            <figure>
+        <section class="grid-container">
+            <article>
+                <h2>Support and Inclusivity</h2>
+                <p>CAPS is committed to creating a welcoming and affirming environment for all students, celebrating diversity and promoting social justice. We stand against discrimination and harassment, working to ensure that every student feels valued and supported.</p>
                 <img src="images/support_dog.jpg" alt="Students interacting with a therapy dog">
-            </figure>
-        </section>
+            </article>
 
-        <section>
-            <h2>Contact Information</h2>
-            <address>
-                Michigan Union, Suite 4079<br>
-                530 South State Street, Ann Arbor, MI 48109<br>
-                Phone: (734) 764-8312 (24hrs)<br>
-                Email: <a href="mailto:caps-uofm@umich.edu">caps-uofm@umich.edu</a>
-            </address>
+            <article>
+                <h2>Contact Information</h2>
+                <address>
+                    Michigan Union, Suite 4079<br>
+                    530 South State Street, Ann Arbor, MI 48109<br>
+                    Phone: (734) 764-8312 (24hrs)<br>
+                    Email: <a href="mailto:caps-uofm@umich.edu">caps-uofm@umich.edu</a>
+                </address>
+            </article>
         </section>
 
         <section>
@@ -82,5 +84,10 @@
         <p>&copy; 2025 University of Michigan | <a href="https://umich.edu">U-M Website</a></p>
     </footer>
 
+    <script>
+        const footer = document.querySelector('footer p');
+        const year = new Date().getFullYear();
+        footer.innerHTML = `&copy; ${year} University of Michigan | <a href="https://umich.edu">U-M Website</a>`;
+    </script>
 </body>
 </html>
